@@ -1,0 +1,19 @@
+#def is used to define the function print_divisibility_table
+#so the it prints the divisibility table
+def print_divisibility_table(upper_limit):
+    print("Number | Divisible by 2 | Divisible by 3 | Divisible by Both | Divisible by Neither")
+    print("-------------------------------------------------------------")
+    
+    for num in range(1, upper_limit + 1):
+        
+        if num % 2 == 0 and num % 3 == 0:
+            print(f"{num} | Yes | Yes | Yes | No")
+        elif num % 2 == 0:
+            print(f"{num} | Yes | No | No | No")
+        elif num % 3 == 0:
+            print(f"{num} | No | Yes | No | No")
+        else:
+            print(f"{num} | No | No | No | Yes")
+
+upper_limit = int(input("Please enter an upper limit (integer): "))
+print_divisibility_table(upper_limit)
